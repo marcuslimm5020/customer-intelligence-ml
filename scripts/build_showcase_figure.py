@@ -67,17 +67,15 @@ def main() -> None:
     # Contact capacity tradeoff on the holdout.
     ax = axes[0, 1]
     capacity = campaign["capacity_share"] * 100
-    ax.plot(capacity, campaign["precision"] * 100, marker="o", color="#147D75", linewidth=2.5, label="Precision")
-    ax.plot(capacity, campaign["recall"] * 100, marker="o", color="#D18A00", linewidth=2.5, label="Recall")
+    ax.plot(capacity, campaign["precision"] * 100, marker="o", color="#147D75", linewidth=2.5)
     ax.set_xlabel("Customers contacted (% of eligible population)")
-    ax.set_ylabel("Customers reached (%)")
-    ax.set_title("Outreach capacity tradeoff · holdout", loc="left")
+    ax.set_ylabel("Contacted customers who purchased (%)")
+    ax.set_title("Purchase rate by contact capacity · holdout", loc="left")
     ax.set_xticks(capacity, [f"{int(v)}%" for v in capacity])
     ax.grid(color="#EAECF0", linewidth=0.8)
     ax.set_axisbelow(True)
-    ax.legend(frameon=False, loc="lower right")
     ax.scatter([20], [float(test["precision_at_top_20pct"]) * 100], color="#147D75", zorder=5)
-    ax.annotate("Top 20%: 74.8% precision\n34.9% recall", (20, 74.85), xytext=(27, 86), textcoords="data", fontsize=9, arrowprops={"arrowstyle": "-", "color": "#667085"})
+    ax.annotate("Top 20%: about 75 out of 100\npurchased within 30 days", (20, 74.85), xytext=(27, 86), textcoords="data", fontsize=9, arrowprops={"arrowstyle": "-", "color": "#667085"})
 
     # Calibration comparison.
     ax = axes[1, 0]
