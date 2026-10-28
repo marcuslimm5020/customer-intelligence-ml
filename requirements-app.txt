@@ -1,0 +1,3 @@
+# Streamlit 1.44.1 supports this project's Python 3.9 environment.
+-r requirements-api.txt
+streamlit==1.44.1

@@ -1,0 +1,13 @@
+.git
+.venv
+.cache
+__pycache__
+*.py[cod]
+.pytest_cache
+data
+docs
+notebooks
+tests
+mlruns
+artifacts/**
+!artifacts/purchase_propensity_pipeline.joblib

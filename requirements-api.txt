@@ -1,0 +1,8 @@
+# Keep these versions aligned with the serialized local model artifact.
+numpy==2.0.2
+pandas==2.3.3
+scikit-learn==1.6.1
+xgboost==2.1.4
+joblib==1.5.3
+fastapi==0.119.1
+uvicorn[standard]==0.34.3
