@@ -31,11 +31,11 @@ The November holdout is kept separate from model selection. The model is refit o
 
 ## Key result and interpretation
 
-| Model | Validation average precision | Validation precision at top 20% | Validation Brier score |
-|---|---:|---:|---:|
-| Logistic Regression | 0.6130 | 0.669 | 0.203 |
-| Random Forest | 0.6020 | 0.675 | 0.206 |
-| **XGBoost** | **0.6134** | 0.665 | **0.202** |
+| Model | Validation average precision | Validation precision at top 20% |
+|---|---:|---:|
+| Logistic Regression | 0.6130 | 0.669 | 
+| Random Forest | 0.6020 | 0.675 | 
+| **XGBoost** | **0.6134** | 0.665 | 
 
 On the November holdout, the model achieved **0.6754 average precision**. Contacting the top-ranked 20% would have reached 493 of 2,461 eligible customers, with **74.8% precision** and **34.9% recall** for that month.
 
