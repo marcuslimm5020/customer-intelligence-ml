@@ -105,16 +105,6 @@ uvicorn src.api:app --reload
 
 Open `http://127.0.0.1:8000/docs` to try a prediction. The API is a local demonstration; see [the API guide](docs/api.md).
 
-## What to discuss in an interview
-
-1. **Problem framing:** define a 30-day repeat-purchase label for customers active in a 90-day window.
-2. **Data quality:** remove duplicates, cancellations, unidentified customers, and non-positive sale lines; explain the assumptions.
-3. **Leakage control:** calculate features strictly before each cutoff and use chronological splits.
-4. **Model selection:** compare a linear baseline and tree models; choose by validation average precision for the imbalanced ranking task.
-5. **Business interpretation:** show the top-20% contact scenario, then explain why calibration and capacity/cost assumptions matter.
-6. **Limitations:** one retailer, one year, one final holdout month, overlapping customer snapshots, and a historic seasonal shift.
-
-Use the [interview walkthrough](docs/interview-walkthrough.md) for a short talk track and a code tour.
 
 ## Project map
 
